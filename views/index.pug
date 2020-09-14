@@ -1,0 +1,28 @@
+extends layout
+
+
+
+block content
+  script(src='/javascripts/index.js')
+  h1= title
+  p Memorize the highlighted tiles, then find them after the grid rotates! If your score drops to zero, it's game over!
+  div.row
+    div.col-1
+      h2 Score:
+    div.col-10
+      h2#scoreDiv
+
+  button(type="button" id="startEndButton" class="btn btn-primary", onClick="toggleStartEndButton()")
+
+  br
+  br
+  br
+  br
+  br
+
+  #gameTableDiv.d-flex.justify-content-center
+      #gameTable
+
+  br
+  audio(id="spinNoise" controls='', autoplay='').hidden
+    source(src='/Resources/audio/spin.wav', type='audio/mpeg')

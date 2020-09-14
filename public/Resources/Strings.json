@@ -1,0 +1,8 @@
+{
+    "endButtonText": "Terminate",
+    "startButtonText": "Play",
+    "scoreKey": "score",
+    "streakKey": "streak",
+    "successMessage": "GOOD JOB!",
+    "failureMessage": "wrong."
+}

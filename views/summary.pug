@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    script(src='/javascripts/summary.js')
+    h1 SUMMARY
+    h2#userScore SCORE
+
+    #submissionForm
+        form(method="post" action="/leaderboard")
+            div.form-group
+                label(for="nameField") Name:
+                input#nameField.form-control(type="text", placeholder="Name" name="name")
+                input#scoreField.form-control(type="hidden", name="score" value=0)
+                button.btn.btn-primary(type="submit") Submit

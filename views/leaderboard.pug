@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    script(src='/javascripts/leaderboard.js')
+    h1 LEADERBOARD
+    br
+    h2=playerName
+    h2 Score: #{playerScore}
+    h3 Rank: #{playerRank}
+    div
+        table.table.table-striped.table-bordered.table-dark
+            thead
+                tr
+                    th Name
+                    th Score
+            tbody
+                each value, index in scores
+                    tr
+                        td= value.Name
+                        td= value.Score
+    br
+    button(onclick="location.href='/'").btn.btn-success Restart
